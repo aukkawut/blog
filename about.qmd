@@ -1,0 +1,29 @@
+---
+title: "About"
+image: Logo.png
+about:
+  template: solana
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/aukkawut
+
+---
+
+
+:::{#hero-heading}
+
+My name is Aukkawut Ammartayakun (/ˈɔː.kə.wuːt/ /ɑːm ˈmɑ:d ˈtɑː jə ˈkʊn/). I study data science and love learning new things about DS. This is probably one of my personal shitposting place. I might get some nerd shit out.
+
+## Education
+
+ - High School
+    * Science Classroom in University - Affiliated School (SCiUS) program at Silpakorn University (2016 - 2019)
+    * Postgraduate at Northfield Mount Hermon (2019 - 2020)
+ - College
+    * B.S Data Science at Worcester Polytechnic Institute (2020 - 2024) [With distinction]
+    * M.S Data Science at Worcester Polytechnic Institute (2023 - 2024)
+    * Ph.D. Data Science and Engineering at The University of Tennessee, Knoxville (2024, dropout)
+
+:::
+
