@@ -2,7 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/geometric-representation/index.html"
+      "/posts/geometric-representation/index.html",
+      "/posts/permission-to-die/index.html",
+      "/posts/utk-eduroam/index.html",
+      "/posts/gentoo-experience/index.html"
     ]
   }
 ]
