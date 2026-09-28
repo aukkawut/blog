@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Aukkawut Ammartayakun (/ˈɔː.kə.wuːt/ /ɑːm ˈmɑ:d ˈtɑː jə ˈkʊn/). I study data science and love learning new things about DS. This is probably one of my personal shitposting place. I might get some nerd shit out.\n\n\n\nHigh School\n\nScience Classroom in University - Affiliated School (SCiUS) program at Silpakorn University (2016 - 2019)\nPostgraduate at Northfield Mount Hermon (2019 - 2020)\n\nCollege\n\nB.S Data Science at Worcester Polytechnic Institute (2020 - 2024) [With distinction]\nM.S Data Science at Worcester Polytechnic Institute (2023 - 2024)\nPh.D. Data Science and Engineering at The University of Tennessee, Knoxville (2024, dropout)"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "",
+    "text": "High School\n\nScience Classroom in University - Affiliated School (SCiUS) program at Silpakorn University (2016 - 2019)\nPostgraduate at Northfield Mount Hermon (2019 - 2020)\n\nCollege\n\nB.S Data Science at Worcester Polytechnic Institute (2020 - 2024) [With distinction]\nM.S Data Science at Worcester Polytechnic Institute (2023 - 2024)\nPh.D. Data Science and Engineering at The University of Tennessee, Knoxville (2024, dropout)"
+  },
+  {
+    "objectID": "posts/geometric-representation/index.html",
+    "href": "posts/geometric-representation/index.html",
+    "title": "Interesting Problem on ML",
+    "section": "",
+    "text": "Problem statement\nSuppose we have a data \\(X_1,\\dots,X_n \\sim D\\) where \\(D\\) is our data distribution. Suppose further that \\(X_i = [x_1 \\quad \\dots \\quad x_m \\quad y_i]^\\top\\) where \\(y_i\\) is our label (\\(y_i\\in \\{0,1\\}\\) for simplicity). Then, with this finite observations \\(X_1,\\dots,X_n\\), we want to reconstruct \\(D\\) with parameterized distribution \\(\\tilde{D}(\\theta)\\) where \\(\\theta \\in \\Theta_{1:n} = \\Theta(X_1,\\dots, X_n)\\) that at least \\[ \\mathbb{E}_{1:n}\\left[\\inf_{\\theta\\in\\Theta_{1:n}} d_\\mathcal{H}(D,\\tilde{D}(\\theta))\\right] &lt; \\varepsilon \\]\nwhere \\(\\mathbb{E}_{1:n}\\) is expectation operator under finite sample. That said, \\(D\\) is unknown. We could first invoke the triangle inequality of the metric \\(d_{\\mathcal{H}}\\) so that we have\n\\[ \\mathbb{E}_{1:n}\\left[\\inf_{\\theta\\in\\Theta_{1:n}} d_\\mathcal{H}(D, \\tilde{D}(\\theta))\\right] \\leq \\mathbb{E}_{1:n}\\left[d_\\mathcal{H}(D,\\tilde{0}) + \\inf_{\\theta\\in\\Theta_{1:n}} d_{\\mathcal{H}}(\\tilde{D}(\\theta), \\tilde{0})\\right] \\]\nwhere \\(\\tilde{0}\\in\\mathcal{H}\\) which is some anchor point on the space \\(\\mathcal{H}\\). Same with other direction, that is\n\\[\n\\mathbb{E}_{1:n}\\left[\\inf_{\\theta\\in\\Theta_{1:n}} d_\\mathcal{H}(D, \\tilde{D}(\\theta))\\right] \\geq \\mathbb{E}_{1:n}\\left[d_\\mathcal{H}(D,\\tilde{0}) - \\sup_{\\theta\\in\\Theta_{1:n}} d_{\\mathcal{H}}(\\tilde{D}(\\theta), \\tilde{0})\\right]\n\\]\nThat implies \\[\n\\mathbb{E}_{1:N}\\left[d_{\\mathcal{H}}(D,\\tilde{0}) - \\sup_{\\theta\\in\\Theta_{1:n}} d_{\\mathcal{H}}(\\tilde{D}(\\theta), \\tilde{0})\\right] \\leq \\mathbb{E}_{1:n}\\left[\\inf_{\\theta\\in\\Theta_{1:n}} d_\\mathcal{H}(D,\\tilde{D}(\\theta))\\right] \\leq \\mathbb{E}_{1:N}\\left[d_{\\mathcal{H}}(D,\\tilde{0}) + \\inf_{\\theta\\in\\Theta_{1:n}} d_{\\mathcal{H}}(\\tilde{D}(\\theta), \\tilde{0})\\right]\n\\]\nThis is one of the interesting condition to think about \\[\n\\mathbb{E}_{1:N}\\left[d_{\\mathcal{H}}(D,\\tilde{0})\\right] &gt; \\mathbb{E}_{1:N}\\left[\\sup_{\\theta\\in\\Theta_{1:n}} d_{\\mathcal{H}}(\\tilde{D}(\\theta), \\tilde{0})\\right]\n\\] because if that is true for all \\(\\tilde{0}\\in \\mathcal{H}\\) then you can’t reconstruct the distribution with the model exactly under metric \\(d_\\mathcal{H}\\). Now, suppose further that if we have a sequence of the model or observation, can we talk about the asymptotic behavior or show something (like \\(\\limsup\\) or \\(\\liminf\\) style of argument) to say that specific family of the model cannot, asymptotically, representing the “real” distribution under the metric \\(d_\\mathcal{H}\\)?\nWill add more to this soon after I have thought about it or fletching out the idea. As-is, is like, not clear."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Shitposting stuff",
+    "section": "",
+    "text": "Interesting Problem on ML\n\n\n\nquestion\n\n\n\n\n\n\n\n\n\nSep 28, 2026\n\n\nAukkawut Ammartayakun\n\n\n\n\n\nNo matching items"
+  }
+]

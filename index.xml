@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>The Blog</title>
+<link>https://aukkawut.github.io/blogs/</link>
+<atom:link href="https://aukkawut.github.io/blogs/index.xml" rel="self" type="application/rss+xml"/>
+<description>Some of my stuff</description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Sun, 27 Sep 2026 17:00:00 GMT</lastBuildDate>
+<item>
+  <title>Interesting Problem on ML</title>
+  <dc:creator>Aukkawut Ammartayakun</dc:creator>
+  <link>https://aukkawut.github.io/blogs/posts/geometric-representation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="problem-statement" class="level1">
+<h1>Problem statement</h1>
+<p>Suppose we have a data <img src="https://latex.codecogs.com/png.latex?X_1,%5Cdots,X_n%20%5Csim%20D"> where <img src="https://latex.codecogs.com/png.latex?D"> is our data distribution. Suppose further that <img src="https://latex.codecogs.com/png.latex?X_i%20=%20%5Bx_1%20%5Cquad%20%5Cdots%20%5Cquad%20x_m%20%5Cquad%20y_i%5D%5E%5Ctop"> where <img src="https://latex.codecogs.com/png.latex?y_i"> is our label (<img src="https://latex.codecogs.com/png.latex?y_i%5Cin%20%5C%7B0,1%5C%7D"> for simplicity). Then, with this finite observations <img src="https://latex.codecogs.com/png.latex?X_1,%5Cdots,X_n">, we want to reconstruct <img src="https://latex.codecogs.com/png.latex?D"> with parameterized distribution <img src="https://latex.codecogs.com/png.latex?%5Ctilde%7BD%7D(%5Ctheta)"> where <img src="https://latex.codecogs.com/png.latex?%5Ctheta%20%5Cin%20%5CTheta_%7B1:n%7D%20=%20%5CTheta(X_1,%5Cdots,%20X_n)"> that at least <img src="https://latex.codecogs.com/png.latex?%20%5Cmathbb%7BE%7D_%7B1:n%7D%5Cleft%5B%5Cinf_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%5Cmathcal%7BH%7D(D,%5Ctilde%7BD%7D(%5Ctheta))%5Cright%5D%20%3C%20%5Cvarepsilon%20"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BE%7D_%7B1:n%7D"> is expectation operator under finite sample. That said, <img src="https://latex.codecogs.com/png.latex?D"> is unknown. We could first invoke the triangle inequality of the metric <img src="https://latex.codecogs.com/png.latex?d_%7B%5Cmathcal%7BH%7D%7D"> so that we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathbb%7BE%7D_%7B1:n%7D%5Cleft%5B%5Cinf_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%5Cmathcal%7BH%7D(D,%20%5Ctilde%7BD%7D(%5Ctheta))%5Cright%5D%20%5Cleq%20%5Cmathbb%7BE%7D_%7B1:n%7D%5Cleft%5Bd_%5Cmathcal%7BH%7D(D,%5Ctilde%7B0%7D)%20+%20%5Cinf_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%7B%5Cmathcal%7BH%7D%7D(%5Ctilde%7BD%7D(%5Ctheta),%20%5Ctilde%7B0%7D)%5Cright%5D%20"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Ctilde%7B0%7D%5Cin%5Cmathcal%7BH%7D"> which is some anchor point on the space <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BH%7D">. Same with other direction, that is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BE%7D_%7B1:n%7D%5Cleft%5B%5Cinf_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%5Cmathcal%7BH%7D(D,%20%5Ctilde%7BD%7D(%5Ctheta))%5Cright%5D%20%5Cgeq%20%5Cmathbb%7BE%7D_%7B1:n%7D%5Cleft%5Bd_%5Cmathcal%7BH%7D(D,%5Ctilde%7B0%7D)%20-%20%5Csup_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%7B%5Cmathcal%7BH%7D%7D(%5Ctilde%7BD%7D(%5Ctheta),%20%5Ctilde%7B0%7D)%5Cright%5D%0A"></p>
+<p>That implies <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BE%7D_%7B1:N%7D%5Cleft%5Bd_%7B%5Cmathcal%7BH%7D%7D(D,%5Ctilde%7B0%7D)%20-%20%5Csup_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%7B%5Cmathcal%7BH%7D%7D(%5Ctilde%7BD%7D(%5Ctheta),%20%5Ctilde%7B0%7D)%5Cright%5D%20%5Cleq%20%5Cmathbb%7BE%7D_%7B1:n%7D%5Cleft%5B%5Cinf_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%5Cmathcal%7BH%7D(D,%5Ctilde%7BD%7D(%5Ctheta))%5Cright%5D%20%5Cleq%20%5Cmathbb%7BE%7D_%7B1:N%7D%5Cleft%5Bd_%7B%5Cmathcal%7BH%7D%7D(D,%5Ctilde%7B0%7D)%20+%20%5Cinf_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%7B%5Cmathcal%7BH%7D%7D(%5Ctilde%7BD%7D(%5Ctheta),%20%5Ctilde%7B0%7D)%5Cright%5D%0A"></p>
+<p>This is one of the interesting condition to think about <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BE%7D_%7B1:N%7D%5Cleft%5Bd_%7B%5Cmathcal%7BH%7D%7D(D,%5Ctilde%7B0%7D)%5Cright%5D%20%3E%20%5Cmathbb%7BE%7D_%7B1:N%7D%5Cleft%5B%5Csup_%7B%5Ctheta%5Cin%5CTheta_%7B1:n%7D%7D%20d_%7B%5Cmathcal%7BH%7D%7D(%5Ctilde%7BD%7D(%5Ctheta),%20%5Ctilde%7B0%7D)%5Cright%5D%0A"> because if that is true for all <img src="https://latex.codecogs.com/png.latex?%5Ctilde%7B0%7D%5Cin%20%5Cmathcal%7BH%7D"> then you can’t reconstruct the distribution with the model exactly under metric <img src="https://latex.codecogs.com/png.latex?d_%5Cmathcal%7BH%7D">. Now, suppose further that if we have a sequence of the model or observation, can we talk about the asymptotic behavior or show something (like <img src="https://latex.codecogs.com/png.latex?%5Climsup"> or <img src="https://latex.codecogs.com/png.latex?%5Climinf"> style of argument) to say that specific family of the model cannot, asymptotically, representing the “real” distribution under the metric <img src="https://latex.codecogs.com/png.latex?d_%5Cmathcal%7BH%7D">?</p>
+<p>Will add more to this soon after I have thought about it or fletching out the idea. As-is, is like, not clear.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>question</category>
+  <guid>https://aukkawut.github.io/blogs/posts/geometric-representation/</guid>
+  <pubDate>Sun, 27 Sep 2026 17:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
